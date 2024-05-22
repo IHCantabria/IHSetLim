@@ -121,23 +121,20 @@ class cal_Lim(object):
             ]
             self.model_sim = model_simulation
 
+
     def split_data(self):
         """
         Split the data into calibration and validation datasets.
         """
-        ii = np.where(self.time>=self.start_date)[0][0]
-        self.E = self.E[ii:]
-        self.time = self.time[ii:]
-
-        idx = np.where((self.time < self.start_date) | (self.time > self.end_date))[0]
+        idx = np.where((self.time < self.start_date) | (self.time > self.end_date))
         self.idx_validation = idx
 
-        idx = np.where((self.time >= self.start_date) & (self.time <= self.end_date))[0]
+        idx = np.where((self.time >= self.start_date) & (self.time <= self.end_date))
         self.idx_calibration = idx
-        self.E_splited = self.E[idx]
+        self.Hb_splited = self.Hb[idx]
         self.time_splited = self.time[idx]
 
-        idx = np.where((self.time_obs >= self.start_date) & (self.time_obs <= self.end_date))[0]
+        idx = np.where((self.time_obs >= self.start_date) & (self.time_obs <= self.end_date))
         self.Obs_splited = self.Obs[idx]
         self.time_obs_splited = self.time_obs[idx]
 
