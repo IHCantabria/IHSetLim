@@ -101,7 +101,7 @@ class cal_Lim(object):
                 # ar = par['ar']
                 kr = par['kr']
                 mu = par['mu']    
-                S0 = par['S0']
+                Yini = par['Yini']
                 Ymd = lim.lim(self.Hb_splited,
                                     self.dt,
                                     self.A,
@@ -109,7 +109,7 @@ class cal_Lim(object):
                                     kr,
                                     mu,
                                     self.Sm,
-                                    S0)
+                                    Yini)
                 
                 return Ymd[self.idx_obs_splited]
                 
@@ -117,7 +117,7 @@ class cal_Lim(object):
                 # Uniform('ar', 0.0001, 1.0),
                 Uniform('kr', 0.0001, 1.0),
                 Uniform('mu', 0.0001, 1.0),
-                Uniform('S0', np.min(self.Obs), np.max(self.Obs))
+                Uniform('Yini', np.min(self.Obs), np.max(self.Obs))
             ]
             self.model_sim = model_simulation
 
