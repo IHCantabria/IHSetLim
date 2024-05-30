@@ -45,10 +45,10 @@ class cal_Lim(object):
         self.time = mkTime(wav['Y'].values, wav['M'].values, wav['D'].values, wav['h'].values)
         self.Eb = self.Hs**2 / 16
         
-        self.depth = kwargs['depth']
-        self.angleBathy = kwargs['angleBathy']
-        self.D50 = kwargs['D50']
-        self.mf = kwargs['mf']
+        self.depth = cfg['depth'].values
+        self.angleBathy = cfg['bathy_angle'].values
+        self.D50 = cfg['D50'].values
+        self.mf = cfg['mf'].values
         self.A = ADEAN(self.D50)
         
         breakType = "spectral"
