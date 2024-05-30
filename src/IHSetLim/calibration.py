@@ -28,7 +28,7 @@ class cal_Lim(object):
         self.cal_alg = cfg['cal_alg'].values
         self.metrics = cfg['metrics'].values
         self.dt = cfg['dt'].values
-        self.switch_S_ini = cfg['switch_S_ini'].values
+        self.switch_Yini = cfg['switch_Yini'].values
 
         if self.cal_alg == 'NSGAII':
             self.n_pop = cfg['n_pop'].values
@@ -63,7 +63,7 @@ class cal_Lim(object):
 
         self.split_data()
 
-        if self.switch_S_ini == 0:
+        if self.switch_Yini == 0:
             self.S0 = self.Obs_splited[0]
         self.Sm = np.mean(self.Obs_splited)
         
@@ -73,7 +73,7 @@ class cal_Lim(object):
         mkIdx = np.vectorize(lambda t: np.argmin(np.abs(self.time - t)))
         self.idx_obs = mkIdx(self.time_obs)
 
-        if self.switch_S_ini == 0:
+        if self.switch_Yini == 0:
             def model_simulation(par):
                 # ar = par['ar']
                 kr = par['kr']
@@ -96,7 +96,7 @@ class cal_Lim(object):
             ]
             self.model_sim = model_simulation
 
-        elif self.switch_S_ini == 1:
+        elif self.switch_Yini == 1:
             def model_simulation(par):
                 # ar = par['ar']
                 kr = par['kr']
