@@ -9,7 +9,7 @@ import numpy as np
 # Avaliable methods: NSGAII, mle, mc, dds, mcmc, sa, abc, lhs, rope, sceua, demcz, padds, fscabc
 
 # config = xr.Dataset(coords={'dt': 3,                # [hours]
-#                             'switch_S_ini': 0,  # Calibrate the initial position? (0: No, 1: Yes)
+#                             'switch_Yini': 0,  # Calibrate the initial position? (0: No, 1: Yes)
 #                             'Ysi': 2000,            # Initial year for calibration
 #                             'Msi': 1,               # Initial month for calibration
 #                             'Dsi': 1,               # Initial day for calibration
@@ -24,7 +24,7 @@ import numpy as np
 #                             })              
 
 config = xr.Dataset(coords={'dt': 3,                # [hours]
-                            'switch_S_ini': 0,      # Calibrate the initial position? (0: No, 1: Yes)
+                            'switch_Yini': 0,      # Calibrate the initial position? (0: No, 1: Yes)
                             'Ysi': 1975,            # Initial year for calibration
                             'Msi': 1,               # Initial month for calibration
                             'Dsi': 1,               # Initial day for calibration
