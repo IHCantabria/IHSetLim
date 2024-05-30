@@ -25,6 +25,10 @@ import numpy as np
 
 config = xr.Dataset(coords={'dt': 3,                # [hours]
                             'switch_Yini': 0,      # Calibrate the initial position? (0: No, 1: Yes)
+                            'depth': 10,              # Water depth [m]
+                            'D50': 0.427e-3,             # Median grain size [m]
+                            'bathy_angle': 36,       # Bathymetry mean orientation [deg N]
+                            'mf' : 0.02,              # Proflie slope                        
                             'Ysi': 1975,            # Initial year for calibration
                             'Msi': 1,               # Initial month for calibration
                             'Dsi': 1,               # Initial day for calibration
