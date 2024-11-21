@@ -1,51 +1,16 @@
 Metadata-Version: 2.1
 Name: IHSetLim
-Version: 1.1.0
+Version: 1.1.1
 Summary: IH-SET Lim et al. (2022)
 Home-page: https://github.com/IHCantabria/IHSetLim
 Author: Changbin Lim
-Author-email: "Lim, Changbin" <changbin.lim@unican.es>
-Maintainer-email: "Lim, Changbin" <changbin.lim@unican.es>
-Project-URL: documentation, https://ihcantabria.github.io/IHSetLim/
-Project-URL: repository, https://github.com/IHCantabria/IHSetLim
-Project-URL: changelog, https://github.com/IHCantabria/IHSetLim/blob/main/CHANGELOG.md
-Classifier: Topic :: Scientific/Engineering
-Classifier: Topic :: Scientific/Engineering :: Physics
-Classifier: Development Status :: 1 - Planning
-Classifier: Programming Language :: Python
-Classifier: Programming Language :: Python
+Author-email: limcs@unican.es
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
-Classifier: Programming Language :: Python :: 3.10
-Classifier: Programming Language :: Python :: 3.11
-Requires-Python: >=3.9
-Description-Content-Type: text/markdown
-Provides-Extra: dev
-
-# IHSetLim
-
-Lim et al. (2022) proposed a simple shoreline model for predicting cross-shore changes. This model is useful to understand the dynamics of the shoreline evolution caused by wave energy. In addition, this model simply predicts temporal cross-shore evolution.
-
-
-## Installation and use
-
-To install this module use:
-
-```sh
-pip install https://github.com/IHCantabria/IHSetLim/archive/refs/tags/latest.zip
-```
-
-Run tests to validate:
-
-```sh
-ihsetlim-tests
-```
-
-## Documentation
-
-Documentation is available at https://ihcantabria.github.io/IHSetLim
-
-## Credits
-
-Developed and maintained by Lim, Changbin @ IHCantabria.
+License-File: LICENSE

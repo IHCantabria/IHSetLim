@@ -1,5 +1,5 @@
+LICENSE
 README.md
-pyproject.toml
 setup.py
 IHSetLim/__init__.py
 IHSetLim/calibration.py
@@ -9,7 +9,6 @@ IHSetLim/plot_par_evolution.py
 IHSetLim.egg-info/PKG-INFO
 IHSetLim.egg-info/SOURCES.txt
 IHSetLim.egg-info/dependency_links.txt
-IHSetLim.egg-info/entry_points.txt
 IHSetLim.egg-info/requires.txt
 IHSetLim.egg-info/top_level.txt
 IHSetLim/tests/__init__.py

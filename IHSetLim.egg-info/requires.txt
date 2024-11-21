@@ -1,17 +1,8 @@
 numpy
-pytest>=7
-scipy
-shapely
 xarray
-matplotlib
+numba
 pandas
-netCDF4
-setuptools
-
-[dev]
-flit
-black
-sphinx
-myst-nb
-sphinx_rtd_theme
-pre-commit
+datetime
+spotpy
+IHSetCalibration@ git+https://github.com/defreitasL/IHSetCalibration.git
+fast_optimization@ git+https://github.com/defreitasL/fast_optimization.git
