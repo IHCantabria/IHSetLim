@@ -1,0 +1,2 @@
+[console_scripts]
+ihsetlim-tests = IHSetLim.tests.__init__:run_tests

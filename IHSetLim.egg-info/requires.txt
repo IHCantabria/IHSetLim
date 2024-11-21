@@ -1,0 +1,17 @@
+numpy
+pytest>=7
+scipy
+shapely
+xarray
+matplotlib
+pandas
+netCDF4
+setuptools
+
+[dev]
+flit
+black
+sphinx
+myst-nb
+sphinx_rtd_theme
+pre-commit

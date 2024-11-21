@@ -2,16 +2,18 @@ from setuptools import setup, find_packages
 
 setup(
     name='IHSetLim',
-    version='0.1.0',
+    version='1.0.0',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         'numpy',
         'xarray',
         'numba',
+        'pandas',
         'datetime',
         'spotpy',
-        'IHSetCalibration @ git+https://github.com/defreitasL/IHSetCalibration.git'
+        'IHSetCalibration @ git+https://github.com/defreitasL/IHSetCalibration.git',
+        'fast_optimization @ git+https://github.com/defreitasL/fast_optimization.git'
     ],
     author='Changbin Lim',
     author_email='limcs@unican.es',
