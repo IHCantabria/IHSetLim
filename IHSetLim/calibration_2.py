@@ -21,7 +21,7 @@ class cal_Lim_2(object):
      
         data = xr.open_dataset(path)
         
-        cfg = json.loads(data.attrs['Jaramillo20'])
+        cfg = json.loads(data.attrs['Lim'])
 
         self.cal_alg = cfg['cal_alg']
         self.metrics = cfg['metrics']
