@@ -4,6 +4,7 @@ setup.py
 IHSetLim/__init__.py
 IHSetLim/calibration.py
 IHSetLim/calibration_2.py
+IHSetLim/direct_run.py
 IHSetLim/lim.py
 IHSetLim/plot_par_evolution.py
 IHSetLim.egg-info/PKG-INFO
