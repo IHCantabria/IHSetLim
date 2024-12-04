@@ -77,7 +77,7 @@ class Lim_run(object):
         mkDT = np.vectorize(lambda i: (self.time[i+1] - self.time[i]).total_seconds()/3600)
         self.dt = mkDT(np.arange(0, len(self.time)-1))
 
-        self.Sm = np.mean(self.Obs_splited)
+        self.Sm = np.mean(self.Obs)
         self.A = ADEAN(self.D50)
 
         if self.switch_Yini== 1:
