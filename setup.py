@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='IHSetLim',
-    version='1.1.4',
+    version='1.1.5',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -10,13 +10,10 @@ setup(
         'xarray',
         'numba',
         'pandas',
-        'datetime',
-        'spotpy',
-        'IHSetCalibration @ git+https://github.com/defreitasL/IHSetCalibration.git',
         'fast_optimization @ git+https://github.com/defreitasL/fast_optimization.git'
     ],
-    author='Changbin Lim',
-    author_email='limcs@unican.es',
+    author='Lucas de Freitas',
+    author_email='lucas.defreitas@unican.es',
     description='IH-SET Lim et al. (2022)',
     url='https://github.com/IHCantabria/IHSetLim',
     classifiers=[
