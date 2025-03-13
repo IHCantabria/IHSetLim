@@ -19,6 +19,8 @@ class cal_Lim_2(object):
 
         self.path = path
         self.name = 'Lim et al. (2022)'
+        self.mode = 'calibration'
+        self.type = 'CS'
      
         data = xr.open_dataset(path)
         

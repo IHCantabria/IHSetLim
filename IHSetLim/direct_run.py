@@ -19,6 +19,8 @@ class Lim_run(object):
 
         self.path = path
         self.name = 'Lim et al. (2022)'
+        self.mode = 'standalone'
+        self.type = 'CS'
      
         data = xr.open_dataset(path)
         
