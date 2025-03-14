@@ -226,12 +226,12 @@ class cal_Lim_2(object):
         self.full_run = self.run_model(self.solution)
 
         if self.switch_Yini == 0:
-            self.par_names = [r'$k_r$', r'$\mu$']
+            self.par_names = [r'k_r', r'mu']
             self.par_values = self.solution.copy()
             self.par_values[0] = np.exp(self.par_values[0])
             self.par_values[1] = np.exp(self.par_values[1])
         elif self.switch_Yini == 1:
-            self.par_names = [r'$k_r$', r'$\mu$', r'$Y_{i}$']
+            self.par_names = [r'k_r', r'mu', r'Y_{i}']
             self.par_values = self.solution.copy()
             self.par_values[0] = np.exp(self.par_values[0])
             self.par_values[1] = np.exp(self.par_values[1])
