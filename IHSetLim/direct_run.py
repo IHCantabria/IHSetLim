@@ -25,6 +25,7 @@ class Lim_run(object):
         data = xr.open_dataset(path)
         
         cfg = json.loads(data.attrs['run_Lim'])
+        self.cfg = cfg
 
         self.switch_Yini = cfg['switch_Yini']
         self.switch_brk = cfg['switch_brk']
