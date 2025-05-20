@@ -11,5 +11,3 @@ IHSetLim.egg-info/SOURCES.txt
 IHSetLim.egg-info/dependency_links.txt
 IHSetLim.egg-info/requires.txt
 IHSetLim.egg-info/top_level.txt
-IHSetLim/tests/__init__.py
-IHSetLim/tests/test_lim.py
