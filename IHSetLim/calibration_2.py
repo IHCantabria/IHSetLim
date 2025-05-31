@@ -189,15 +189,15 @@ class cal_Lim_2(object):
         self.hb = self.hb[ii:]
         self.time = self.time[ii:]
 
-        idx = np.where((self.time < self.start_date) | (self.time > self.end_date))
+        idx = np.where((self.time < self.start_date) | (self.time > self.end_date))[0]
         self.idx_validation = idx
 
-        idx = np.where((self.time >= self.start_date) & (self.time <= self.end_date))
+        idx = np.where((self.time >= self.start_date) & (self.time <= self.end_date))[0]
         self.idx_calibration = idx
         self.hb_splited = self.hb[idx]
         self.time_splited = self.time[idx]
 
-        idx = np.where((self.time_obs >= self.start_date) & (self.time_obs <= self.end_date))
+        idx = np.where((self.time_obs >= self.start_date) & (self.time_obs <= self.end_date))[0]
         self.Obs_splited = self.Obs[idx]
         self.time_obs_splited = self.time_obs[idx]
 
