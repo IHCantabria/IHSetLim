@@ -2,6 +2,7 @@ import numpy as np
 import xarray as xr
 import fast_optimization as fo
 import pandas as pd
+from scipy.stats import circmean
 from .lim import lim
 import json
 from IHSetUtils import BreakingPropagation, ADEAN
@@ -32,9 +33,7 @@ class cal_Lim_2(object):
         self.switch_Yini = cfg['switch_Yini']
         self.switch_brk = cfg['switch_brk']
         if self.switch_brk == 1:
-            self.bathy_angle = cfg['bathy_angle']
             self.breakType = cfg['break_type']
-            self.depth = cfg['depth']
         self.D50 = cfg['D50']
         self.mf = cfg['mf']
         self.lb = cfg['lb']
@@ -51,6 +50,8 @@ class cal_Lim_2(object):
             self.Obs = self.Obs[~data.mask_nan_average_obs]
             self.time_obs = pd.to_datetime(data.time_obs.values)
             self.time_obs = self.time_obs[~data.mask_nan_average_obs]
+            self.depth = np.mean(data.waves_depth.values)
+            self.bathy_angle = circmean(data.phi.values, high=360, low=0)
         else:
             self.hs = data.hs.values[:, cfg['trs']]
             self.tp = data.tp.values[:, cfg['trs']]
@@ -60,6 +61,8 @@ class cal_Lim_2(object):
             self.Obs = self.Obs[~data.mask_nan_obs[:, cfg['trs']]]
             self.time_obs = pd.to_datetime(data.time_obs.values)
             self.time_obs = self.time_obs[~data.mask_nan_obs[:, cfg['trs']]]
+            self.depth = data.waves_depth.values[cfg['trs']]
+            self.bathy_angle = data.phi.values[cfg['trs']]
         
         self.start_date = pd.to_datetime(cfg['start_date'])
         self.end_date = pd.to_datetime(cfg['end_date'])
