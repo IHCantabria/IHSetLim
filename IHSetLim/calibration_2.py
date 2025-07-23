@@ -52,56 +52,37 @@ class cal_Lim_2(CoastlineModel):
         return pop, lowers, uppers
 
     def model_sim(self, par: np.ndarray) -> np.ndarray:
+        kr = np.exp(par[0])
+        mu = np.exp(par[1])
         if self.switch_Yini == 0:
-            kr = np.exp(par[0])
-            mu = np.exp(par[1])
-            Ymd = lim(self.hb_s,
-                      self.dt_s,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      self.Yini)
+            Yini = self.Yini
         elif self.switch_Yini == 1:
-            kr = np.exp(par[0])
-            mu = np.exp(par[1])
             Yini = par[2]
-            Ymd = lim(self.hb_s,
-                      self.dt_s,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      Yini)
+        Ymd = lim(self.hb_s,
+                    self.dt_s,
+                    self.A,
+                    self.mf,
+                    kr,
+                    mu,
+                    self.Sm,
+                    Yini)
         return Ymd[self.idx_obs_splited]
     
     def run_model(self, par: np.ndarray) -> np.ndarray:
-
+        kr = par[0]
+        mu = par[1]
         if self.switch_Yini == 0:
-            kr = par[0]
-            mu = par[1]
-            Ymd = lim(self.hb,
-                      self.dt,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      self.Yini)
+            Yini = self.Yini
         elif self.switch_Yini == 1:
-            kr = par[0]
-            mu = par[1]
             Yini = par[2]
-            Ymd = lim(self.hb,
-                      self.dt,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      Yini)
+        Ymd = lim(self.hb,
+                    self.dt,
+                    self.A,
+                    self.mf,
+                    kr,
+                    mu,
+                    self.Sm,
+                    Yini)
         return Ymd
 
     def _set_parameter_names(self):

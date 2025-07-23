@@ -188,30 +188,20 @@ class Lim_run(object):
         self.A = ADEAN(self.D50)
     
     def run_model(self, par: np.ndarray) -> np.ndarray:
-
+        kr = par[0]
+        mu = par[1]
         if self.switch_Yini == 1:
-            kr = par[0]
-            mu = par[1]
-            Ymd = lim(self.hb,
-                      self.dt,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      self.Yini)
+            Yini = self.Yini
         elif self.switch_Yini == 0:
-            kr = par[0]
-            mu = par[1]
             Yini = par[2]
-            Ymd = lim(self.hb,
-                      self.dt,
-                      self.A,
-                      self.mf,
-                      kr,
-                      mu,
-                      self.Sm,
-                      Yini)
+        Ymd = lim(self.hb,
+                    self.dt,
+                    self.A,
+                    self.mf,
+                    kr,
+                    mu,
+                    self.Sm,
+                    Yini)
         return Ymd
 
     def _set_parameter_names(self):
