@@ -3,6 +3,7 @@ README.md
 setup.py
 IHSetLim/__init__.py
 IHSetLim/calibration_2.py
+IHSetLim/calibration_3.py
 IHSetLim/direct_run.py
 IHSetLim/lim.py
 IHSetLim/plot_par_evolution.py
