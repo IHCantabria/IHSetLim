@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='IHSetLim',
-    version='1.1.18',
+    version='1.1.19',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -10,6 +10,7 @@ setup(
         'xarray',
         'numba',
         'pandas',
+        'IHSetUtils @ git+https://github.com/IHCantabria/IHSetUtils.git',
         'fast_optimization @ git+https://github.com/defreitasL/fast_optimization.git'
     ],
     author='Lucas de Freitas',
